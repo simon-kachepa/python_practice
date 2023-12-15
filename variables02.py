@@ -6,3 +6,6 @@ sum = str(sum)
 
 print("The sum of 10 & 20 is: "+ str(10+20))
 print("The sum of num1 & num2 is: "+ sum)
+
+nationality = "Zimbabweans"
+print("Hello,", nationality)
