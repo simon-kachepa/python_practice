@@ -14,8 +14,9 @@ capitals.update({
     "Botswana": "Gaboroni"
 })
 
+
 #print(capitals.keys())
 #print(capitals.values())
 #print(capitals.clear())
-print(capitals.get("Zimbabwe"))
+#print(capitals.get("Zimbabwe"))
 
