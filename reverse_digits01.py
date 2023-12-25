@@ -5,4 +5,4 @@ while number != 0:
     reversed_num = (reversed_num * 10) + remainder
     number //= 10
 
-print(f"The reversed digits of {number} is: {reversed_num}")
+print(f"The reversed digits is: {reversed_num}")
