@@ -1,7 +1,7 @@
-def unique_list(list):
+def unique_list(my_list):
     traversed_list = []
     deleted = []
-    for item in list:
+    for item in my_list:
         if item in deleted or item in traversed_list:
             deleted.append(item)
             traversed_list.remove(item)
