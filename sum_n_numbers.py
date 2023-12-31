@@ -1,3 +1,4 @@
+# WAP that finds the sum of first n natural numbers
 number = int(input("Enter the number: "))
 sum = i = 0
 while i <= number:
