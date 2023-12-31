@@ -10,3 +10,6 @@ list2 = ["My", "name", "is", "Simon"]
 
 dictionary_01 = {"name": "Simon", "age":13}
 print(" and ".join(dictionary_01))
+
+new_list = list1 + list2
+print(new_list)
