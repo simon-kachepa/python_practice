@@ -5,5 +5,5 @@
 #     print("{} -> {}".format(i, chr(i)))
 
 #Printing unicode characters
-for c in range(97, 123):
-    print(chr(c))
+# for c in range(97, 123):
+#     print(chr(c))
