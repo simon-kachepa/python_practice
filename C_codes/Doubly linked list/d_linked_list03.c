@@ -15,6 +15,7 @@ void inserting_at_end(Node *head, int data);
 void add_at_certain_position(Node *head, int position, int data);
 Node *delete_first_node(Node *head);
 void delete_last_node(Node *head);
+void delete_at_certain_position(Node *head, int position);
 
 int main(void)
 {
@@ -48,6 +49,10 @@ int main(void)
 
     /*Deleting the last node*/
     delete_last_node(head);
+    print_linked_list(head);
+
+    /* Deleting node at a certain position*/
+    delete_at_certain_position(head, 2);
     print_linked_list(head);
     
     return (0);
@@ -182,4 +187,24 @@ void delete_last_node(Node *head)
         tmp = NULL;
     }
     
+}
+
+void delete_at_certain_position(Node *head, int position)
+{
+    Node *tmp = head;
+    Node *prev_n;
+
+    if (head)
+    {
+        while (position > 1)
+        {
+            tmp = tmp->next;
+            position--;
+        }
+        prev_n = tmp->prev;
+        prev_n->next = tmp->next;
+        tmp->next->prev = prev_n;
+        free(tmp);
+        tmp = NULL;
+    }
 }
