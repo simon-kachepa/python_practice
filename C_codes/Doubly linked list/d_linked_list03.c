@@ -14,6 +14,7 @@ Node *add_at_begginning(Node *head, int data);
 void inserting_at_end(Node *head, int data);
 void add_at_certain_position(Node *head, int position, int data);
 Node *delete_first_node(Node *head);
+void delete_last_node(Node *head);
 
 int main(void)
 {
@@ -22,27 +23,31 @@ int main(void)
     print_linked_list(head);
 
     /*Adding a node to an empty list and print*/
-    // head = add_to_empty(head, 200);
-    // print_linked_list(head);
+    head = add_to_empty(head, 200);
+    print_linked_list(head);
 
     /*Adding a new node at the begginning of the list*/
-    // head = add_at_begginning(head, 100);
-    // print_linked_list(head);
+    head = add_at_begginning(head, 100);
+    print_linked_list(head);
 
     /*Inserting a new node at the end of the list*/
-    // inserting_at_end(head, 300);
-    // print_linked_list(head);
+    inserting_at_end(head, 300);
+    print_linked_list(head);
 
     /*Adding a new node at the second position*/
-    // add_at_certain_position(head, 2, 800);
-    // print_linked_list(head);
+    add_at_certain_position(head, 2, 800);
+    print_linked_list(head);
 
     /*Adding a new node at the fifth psition*/
-    // add_at_certain_position(head, 5, 600);
-    // print_linked_list(head);
+    add_at_certain_position(head, 5, 600);
+    print_linked_list(head);
 
     /* Deleting the first node */
     head = delete_first_node(head);
+    print_linked_list(head);
+
+    /*Deleting the last node*/
+    delete_last_node(head);
     print_linked_list(head);
     
     return (0);
@@ -151,11 +156,30 @@ Node *delete_first_node(Node *head)
     Node *tmp = head;
     if (!tmp)
         return head;
-        
+
     head = head->next;
     head->prev = NULL;
     free(tmp);
     tmp = NULL;
 
     return (head);
+}
+
+void delete_last_node(Node *head)
+{
+    Node *tmp = head;
+    Node * current;
+
+    if (tmp)
+    {
+        while (tmp->next != NULL)
+        {
+            tmp = tmp->next;
+        }
+        current = tmp->prev;
+        current->next = NULL;
+        free(tmp);
+        tmp = NULL;
+    }
+    
 }
