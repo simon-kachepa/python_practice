@@ -8,27 +8,68 @@ typedef struct Node
     struct Node *next;
 }Node;
 
+void print_linked_list(Node *head);
 Node *add_to_empty(Node *head, int data);
 Node *add_at_begginning(Node *head, int data);
 void inserting_at_end(Node *head, int data);
 void add_at_certain_position(Node *head, int position, int data);
+Node *delete_first_node(Node *head);
 
 int main(void)
 {
     Node *head = NULL;
-    head = add_to_empty(head, 200);
-    head = add_at_begginning(head, 100);
-    inserting_at_end(head, 300);
-    add_at_certain_position(head, 2, 800);
-    add_at_certain_position(head, 5, 600);
+    /* Printing the list before adding any node */
+    print_linked_list(head);
 
-    while (head)
-    {
-        printf("%d\n", head->data);
-        head = head->next;
-    }
+    /*Adding a node to an empty list and print*/
+    // head = add_to_empty(head, 200);
+    // print_linked_list(head);
+
+    /*Adding a new node at the begginning of the list*/
+    // head = add_at_begginning(head, 100);
+    // print_linked_list(head);
+
+    /*Inserting a new node at the end of the list*/
+    // inserting_at_end(head, 300);
+    // print_linked_list(head);
+
+    /*Adding a new node at the second position*/
+    // add_at_certain_position(head, 2, 800);
+    // print_linked_list(head);
+
+    /*Adding a new node at the fifth psition*/
+    // add_at_certain_position(head, 5, 600);
+    // print_linked_list(head);
+
+    /* Deleting the first node */
+    head = delete_first_node(head);
+    print_linked_list(head);
     
     return (0);
+}
+
+void print_linked_list(Node *head)
+{
+    Node *ptr = head;
+    if (!ptr)
+    {
+        printf("The linked list is empty\n");
+    }
+    else
+    {
+        while (ptr)
+        {
+            if (ptr->next == NULL)
+            {
+                printf("%d\n", ptr->data);
+            }
+            else
+            {
+                printf("%d, ", ptr->data);
+            }
+            ptr = ptr->next;
+        }
+    }
 }
 
 Node *add_to_empty(Node *head, int data)
@@ -103,4 +144,18 @@ void add_at_certain_position(Node *head, int position, int data)
         tmp->prev = current;
         tmp->next = next_n;
     }
+}
+
+Node *delete_first_node(Node *head)
+{
+    Node *tmp = head;
+    if (!tmp)
+        return head;
+        
+    head = head->next;
+    head->prev = NULL;
+    free(tmp);
+    tmp = NULL;
+
+    return (head);
 }
