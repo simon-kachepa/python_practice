@@ -8,6 +8,7 @@ int first = -1;
 void print_stack_data(void);
 void push(int data);
 int pop(void);
+int isEmpty(void);
 
 int main(void)
 {
@@ -20,6 +21,13 @@ int main(void)
     return (0);
 }
 
+int isEmpty(void)
+{
+    if (first == -1)
+        return (1);
+    else
+        return (0);
+}
 void push(int data)
 {
     int index;
@@ -36,7 +44,7 @@ void print_stack_data(void)
 {
     int index;
 
-    if (first == -1)
+    if (isEmpty())
     {
         printf("The stack is empty\n");
         return;
@@ -56,7 +64,7 @@ int pop(void)
 {
     int index, value;
 
-    if (first == -1)
+    if (isEmpty())
     {
         printf("The stack is empty\n");
         return (-1);
