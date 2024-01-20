@@ -9,6 +9,7 @@ void print_stack_data(void);
 void push(int data);
 int pop(void);
 int isEmpty(void);
+int isFull(void);
 
 int main(void)
 {
@@ -18,6 +19,14 @@ int main(void)
     print_stack_data();
     pop();
     print_stack_data();
+    push(100);
+    push(89);
+    push(120);
+    print_stack_data();
+
+    push(56);
+    print_stack_data();
+
     return (0);
 }
 
@@ -28,10 +37,23 @@ int isEmpty(void)
     else
         return (0);
 }
+
+int isFull(void)
+{
+    if (first == MAX -1)
+        return (1);
+    else
+        return (0);
+}
 void push(int data)
 {
     int index;
 
+    if (isFull())
+    {
+        printf("Stack overflow\n");
+        return;
+    }
     first += 1;
     for (index = first; index > 0; index--)
     {
