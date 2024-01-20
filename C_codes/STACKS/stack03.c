@@ -10,6 +10,7 @@ void push(int data);
 int pop(void);
 int isEmpty(void);
 int isFull(void);
+int peek(void);
 
 int main(void)
 {
@@ -26,6 +27,7 @@ int main(void)
 
     push(56);
     print_stack_data();
+    printf("The top element is: -> %d\n", peek());
 
     return (0);
 }
@@ -60,6 +62,19 @@ void push(int data)
         stack_arr[index] = stack_arr[index - 1];
     }
     stack_arr[0] = data;
+}
+
+/*Function that returns the top element of the stack -> peek()*/
+int peek(void)
+{
+    int top_element;
+    if (isEmpty())
+    {
+        printf("Stack underflow\n");
+        return (0);
+    }
+    top_element = stack_arr[0];
+    return (top_element);
 }
 
 void print_stack_data(void)
