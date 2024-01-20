@@ -71,7 +71,7 @@ int peek(void)
     if (isEmpty())
     {
         printf("Stack underflow\n");
-        return (0);
+        exit(1);
     }
     top_element = stack_arr[0];
     return (top_element);
