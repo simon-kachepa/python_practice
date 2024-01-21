@@ -72,17 +72,17 @@ void print(void)
 
     ptr = top;
     if (isEmpty())
-    {
         printf("STACK UNDERFLOW\n");
-        return;
-    }
-    printf("STACK ELEMENT(S): ");
-    while (ptr)
+    else
     {
-        printf("%d ", ptr->data);
-        ptr = ptr->link;
+        printf("STACK ELEMENT(S): ");
+        while (ptr)
+        {
+            printf("%d ", ptr->data);
+            ptr = ptr->link;
+        }
+        printf("\n");
     }
-    printf("\n");
 }
 
 void push(int data)
@@ -112,12 +112,16 @@ int pop(void)
         printf("STACK UNDERFLOW\n");
         exit(1);
     }
-    value = tmp->data;
-    top = top->link;
-    free(tmp);
-    tmp = NULL;
+    else
+    {
+        value = tmp->data;
+        top = top->link;
+        free(tmp);
+        tmp = NULL;
 
-    return (value);
+        return (value);
+    }
+    
 }
 
 int isEmpty(void)
