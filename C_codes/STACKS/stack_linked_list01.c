@@ -12,6 +12,8 @@ Node *top = NULL;
 void print(void);
 void push(int data);
 int pop(void);
+int isEmpty(void);
+int peek(void);
 
 int main(void)
 {
@@ -31,7 +33,7 @@ void print(void)
     Node *ptr;
 
     ptr = top;
-    if (!ptr)
+    if (isEmpty())
     {
         printf("Stack underflow\n");
         exit(1);
@@ -67,7 +69,7 @@ int pop(void)
 
     Node *tmp = top;
 
-    if (!tmp)
+    if (isEmpty())
     {
         printf("Stack underflow\n");
         exit(1);
@@ -78,4 +80,25 @@ int pop(void)
     tmp = NULL;
 
     return (value);
+}
+
+int isEmpty(void)
+{
+    if (top == NULL)
+        return (1);
+    else
+        return (0);
+}
+
+int peek(void)
+{
+    int top_element;
+    if (isEmpty())
+    {
+        printf("Stack underflow\n");
+        exit(1);
+    }
+    top_element = top->data;
+
+    return (top_element); 
 }
