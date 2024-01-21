@@ -30,21 +30,23 @@ int main(void)
         switch (choice)
         {
             case 1:
-                printf("Enter the data value to add to the stack\n");
+                printf("ENTER DATA VALUE TO ADD TO THE STACK: ");
                 scanf("%d", &data);
                 push(data);
                 break;
 
             case 2:
-                pop();
+                data = pop();
+                printf("THE DELETED ELEMENT IS: %d\n", data);
                 break;
 
             case 3:
-                printf("The top element is: -> %d\n", peek());
+                data = peek();
+                printf("THE TOPMOST ELEMENT IS: %d\n", data);
                 break;
 
             case 4:
-                printf("The stack element(s): -> ");
+                printf("\nSTACK ELEMENT(S): ");
                 print_stack_data();
                 break;
 
@@ -53,7 +55,7 @@ int main(void)
                 break;
 
             default:
-                printf("Invalid option\n");
+                printf("\nINVALID OPTION\n");
         }
     }
 
@@ -99,7 +101,7 @@ int peek(void)
     if (isEmpty())
     {
         printf("Stack underflow\n");
-        return (0);
+        exit(1);
     }
     top_element = stack_arr[0];
     return (top_element);
