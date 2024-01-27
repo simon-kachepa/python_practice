@@ -13,4 +13,6 @@ def main():
     dictionary1 = {'Math': 85, 'Science': 92, 'History': 78, 'English': 88}
     result = maximum_mark(dictionary1)
     print(result)
-main()
+
+if __name__ == "__main__":
+    main()
