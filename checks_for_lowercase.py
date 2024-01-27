@@ -10,4 +10,7 @@ def main():
     print("A is {}".format("lower" if islower("A") else "upper"))
     print("3 is {}".format("lower" if islower("3") else "upper"))
     print("g is {}".format("lower" if islower("g") else "upper")) 
-main()
+
+
+if __name__ == "__main__":
+    main()
