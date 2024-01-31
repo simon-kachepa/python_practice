@@ -13,3 +13,5 @@ for _ in range(10):
 # 4. It is used to seperate digits of a number for better readability
 million = 1_000_000
 print(million)
+
+# 5. 
