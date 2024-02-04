@@ -48,9 +48,7 @@ void inserting_at_end(Node *head, int data)
 
     ptr = head;
     while(ptr->next)
-    {
         ptr = ptr->next;
-    }
     ptr->next = tmp;
     tmp->prev = ptr;
 }
