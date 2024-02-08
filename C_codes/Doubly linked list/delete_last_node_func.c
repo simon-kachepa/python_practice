@@ -16,9 +16,7 @@ void delete_last_node(Node *head)
     if (tmp)
     {
         while (tmp->next != NULL)
-        {
             tmp = tmp->next;
-        }
         current = tmp->prev;
         current->next = NULL;
         free(tmp);
