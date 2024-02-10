@@ -12,8 +12,26 @@ print(employee2)
 
 ##creating instance variables (variables of the instances)
 employee1.name = "Simon"
+employee1.last_name = "Kachepa"
+employee1.email = "kachepasimon@gmail.com"
+employee1.pay = 50000
+
+
 employee2.name = "Hardazy"
+employee2.last_name = "Kanga"
+employee2.email = "hardazysk01@gmail.com"
+employee2.pay = 100000
+
 
 ##printing instance variables
+print("Employee1 details:")
 print(employee1.name)
+print(employee1.last_name)
+print(employee1.email)
+print(employee1.pay)
+print("********************************************")
+print("Employee2 details:")
 print(employee2.name)
+print(employee2.last_name)
+print(employee2.email)
+print(employee2.pay)
