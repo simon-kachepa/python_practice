@@ -6,6 +6,7 @@ class Employee:
 ##creating instances of Employee
 employee1 = Employee()
 employee2 = Employee()
+employee3 = Employee()
 
 print(employee1)
 print(employee2)
