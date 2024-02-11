@@ -24,6 +24,9 @@ employee2.last_name = "Kanga"
 employee2.email = "hardazysk01@gmail.com"
 employee2.pay = 100000
 
+employee3.name = input("Enter name of the thrird employee: ")
+
+
 
 ##printing instance variables
 print("Employee1 details:")
