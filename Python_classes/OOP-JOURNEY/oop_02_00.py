@@ -10,6 +10,7 @@ employee3 = Employee()
 
 print(employee1)
 print(employee2)
+print(employee3)
 
 ##creating instance variables (variables of the instances)
 employee1.name = "Simon"
