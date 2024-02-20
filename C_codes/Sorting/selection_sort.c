@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void selection_sort(int arr[], int n);
 void swap_elements(int* arr, int i, int j);
