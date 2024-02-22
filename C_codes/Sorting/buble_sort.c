@@ -24,6 +24,7 @@ void bubble_sort(int *arr, int n)
         {
             if (arr[index] > arr[index + 1])
             {
+                /*Swapping the elements*/
                 int tmp = arr[index];
                 arr[index] = arr[index + 1];
                 arr[index + 1] = tmp;
