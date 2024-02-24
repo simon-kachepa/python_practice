@@ -32,7 +32,7 @@ class Student:
 
 def main():
     student = get_student()
-    # student.house = "Kondo"
+    ## student.house = "Kondo"
     print(student)
 
 def get_student():
