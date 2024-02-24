@@ -7,7 +7,7 @@ class Square:
         else:
             self.__size = size
 
-my_square_1 = Square(3)
+my_square_1 = Square(4)
 print(type(my_square_1))
 print(my_square_1.__dict__)
 
