@@ -61,6 +61,7 @@ int main(void)
 void print_linked_list(Node *head)
 {
     Node *ptr = head;
+    
     if (!ptr)
     {
         printf("The linked list is empty\n");
