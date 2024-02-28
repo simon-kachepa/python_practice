@@ -83,5 +83,6 @@ void prime_fact(int num)
     {
         printf("%d ", pop());
     }
+    
     printf("\n");
 }
