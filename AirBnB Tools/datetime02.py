@@ -12,6 +12,7 @@ print(today_date + time_delta) ## Printing the date 7 days from today date
 ##Also, the delta can be used to get the days till to a certain date or days after a certain date
 
 my_birthday = datetime.date(2024, 10, 16)
+abc = datetime.datetime.now()
 
 till_my_birthday = my_birthday - today_date ##Subtracting today's date from my birthday to get days left
 print(till_my_birthday)
