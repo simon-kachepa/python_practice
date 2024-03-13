@@ -16,3 +16,4 @@ abc = datetime.datetime.now()
 
 till_my_birthday = my_birthday - today_date ##Subtracting today's date from my birthday to get days left
 print(till_my_birthday)
+print(abc)
