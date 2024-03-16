@@ -1,3 +1,5 @@
+##Program to find the maximum number in a list of numbers
+
 number = int(input("Enter the number of numbers you want: "))
 number_list = []
 for i in range(number):
